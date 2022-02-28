@@ -1,0 +1,2 @@
+class CreateJoinTableDoctorAddress < ApplicationRecord
+end
