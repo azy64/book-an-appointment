@@ -1,3 +1,3 @@
 class Address < ApplicationRecord
-  has_many :doctors
+  has_many :doctor_addresses
 end
