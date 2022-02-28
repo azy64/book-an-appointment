@@ -1,24 +1,74 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Book an appointment app
 
-Things you may want to cover:
+The project we are going to build for the Final Capstone Project is based on an app to book an appointment to the doctor. We should follow the given design of the website, but we personalized the content.
 
-* Ruby version
+![screenshot](./app_screenshot.png)
 
-* System dependencies
+Additional description about the project and its features.
 
-* Configuration
+## Built With
 
-* Database creation
+- ![Ruby](https://img.shields.io/badge/-Ruby-000000?style=flat&logo=ruby&logoColor=red)
+- ![Ruby on Rails](https://img.shields.io/badge/-Ruby_on_Rails-000000?style=flat&logo=ruby-on-rails&logoColor=blue) 
 
-* Database initialization
+## Live Demo
 
-* How to run the test suite
+[Live Demo Link](https://livedemo.com)
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## Getting Started
 
-* ...
+**This is an example of how you may give instructions on setting up your project locally.**
+**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+
+
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+### Setup
+
+### Install
+
+### Usage
+
+### Run tests
+
+### Deployment
+
+
+
+## Authors
+
+👤 **Azaria SAIDI ALLY**
+
+- GitHub: [@azy64](https://github.com/azy64)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/azaria-saidi-524780112/)
+
+👤 **Henry Kc**
+
+- GitHub: [@githubhandle](https://github.com/henrykc24)
+- Twitter: [@twitterhandle](https://twitter.com/henrykc24)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/henry-kc)
+  
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
