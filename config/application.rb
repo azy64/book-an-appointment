@@ -25,7 +25,8 @@ module BookAppointment
     config.api_only = true
     config.middleware.use ActionDispatch::Cookies
     config.middleware.use ActionDispatch::Session::CookieStore
-    config.middleware.insert_after(ActionDispatch::Cookies, ActionDispatch::Session::CookieStore, :key => '_namespace_key')
+    config.middleware.use ActionDispatch::Flash
+    # config.middleware.insert_after(ActionDispatch::Cookies, ActionDispatch::Session::CookieStore, :key => '_namespace_key')
 
   end
 end
