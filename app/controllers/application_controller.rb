@@ -10,4 +10,3 @@ class ApplicationController < ActionController::API
     devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:name, :email, :password, :phone_number) }
   end
 end
-
