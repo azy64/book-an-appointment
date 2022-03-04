@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users,
              controllers: {
-                 sessions: 'sessions',
-                 registrations: 'registrations'
+                 sessions: 'users/sessions',
+                 registrations: 'users/registrations'
              }
-  get '/member-data', to: 'members#show'
+  # get '/member-data', to: 'members#show'
 
   resources :reservations
   resources :addresses
