@@ -36,6 +36,7 @@ class DoctorsController < ApplicationController
   # DELETE /doctors/1
   def destroy
     @doctor.destroy
+    render json: { user: @doctor, message: 'Doctor successfully deleted' }
   end
 
   private
