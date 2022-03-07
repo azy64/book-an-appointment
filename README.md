@@ -47,11 +47,10 @@ To get a local copy up and running follow these simple example steps.
 - GitHub: [@azy64](https://github.com/azy64)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/azaria-saidi-524780112/)
 
-👤 **Henry Kc**
+👤 **Victor**
 
-- GitHub: [@githubhandle](https://github.com/henrykc24)
-- Twitter: [@twitterhandle](https://twitter.com/henrykc24)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/henry-kc)
+- GitHub: [@VICTOR-CHUKWU](https://github.com/VICTOR-CHUKWU)
+- LinkedIn: [Victor-chukwu](https://www.linkedin.com/in/victor-chukwu-95a020143)
   
 ## 🤝 Contributing
 
