@@ -51,6 +51,11 @@ To get a local copy up and running follow these simple example steps.
 
 - GitHub: [@VICTOR-CHUKWU](https://github.com/VICTOR-CHUKWU)
 - LinkedIn: [Victor-chukwu](https://www.linkedin.com/in/victor-chukwu-95a020143)
+
+👤 **Ntazama Willy**
+
+- GitHub: [@ntzwilly](https://github.com/ntzwilly)
+- LinkedIn: [@ntazamawilly](https://linkedin.com/in/ntazama-willy-b676b7aa)
   
 ## 🤝 Contributing
 
