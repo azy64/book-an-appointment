@@ -17,5 +17,11 @@ RSpec.describe ReservationsController, type: :routing do
         it 'routes to #create' do
             expect(post: '/users/1/reservations').to route_to('reservations#create', user_id: '1')
         end
+        it 'routes to #update via PUT' do
+            expect(put: '/users/1/reservations/1').to route_to('reservations#update', id: '1', user_id: '1')
+        end
+        it 'routes to #destroy' do
+            expect(delete: '/users/1/reservations/1').to route_to('reservations#destroy', id: '1', user_id: '1')
+        end
     end
 end
