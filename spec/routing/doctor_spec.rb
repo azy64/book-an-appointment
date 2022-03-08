@@ -14,5 +14,12 @@ RSpec.describe DoctorsController, type: :routing do
       it 'routes to #edit' do
         expect(get: '/doctors/1/edit').to route_to('doctors#edit', id: '1')
       end
+
+			it 'routes to #create' do
+        expect(post: '/doctors').to route_to('doctors#create')
+      end
+      it 'routes to #update via PUT' do
+        expect(put: '/doctors/1').to route_to('doctors#update', id: '1')
+      end
   end
 end
