@@ -34,14 +34,14 @@ class ReservationsController < ApplicationController
     @reservation.reservation_time = params[:reservation][:reservation_time]
     @reservation.user = User.find_by(id: params[:reservation][:user])
     @reservation.doctor = Doctor.find_by(id: params[:reservation][:doctor])
-    @res = {}
-    @res['reservation'] = @reservation
-    @res['user'] = @reservation.user
-    @res['doctor'] = @reservation.doctor
-    @res['address'] = Address.find_by(id: DoctorAddress.find_by(id: @reservation.doctor.doctor_addresses))
+    @reservation_hash = {}
+    @reservation_hash['reservation'] = @reservation
+    @reservation_hash['user'] = @reservation.user
+    @reservation_hash['doctor'] = @reservation.doctor
+    @reservation_hash['address'] = Address.find_by(id: DoctorAddress.find_by(id: @reservation.doctor.doctor_addresses))
 
     if @reservation.save
-      render json: @res, status: :created, location: @reservations
+      render json: @reservation_hash, status: :created, location: @reservations
     else
       render json: @reservation.errors, status: :unprocessable_entity
     end
