@@ -39,7 +39,6 @@ class ReservationsController < ApplicationController
     @res['user'] = @reservation.user
     @res['doctor'] = @reservation.doctor
     @res['address'] = Address.find_by(id: DoctorAddress.find_by(id: @reservation.doctor.doctor_addresses))
-    # user = User.find_by(id: @reservation.user)
     # doctor = Doctor.find_by(id: @reservation.doctor)
     # @reservation.user = @user1
     # @reservation.doctor = @doc
