@@ -5,15 +5,15 @@ class DoctorsController < ApplicationController
   def index
     @doctors = Doctor.all
     i = 0
-    @docs = []
+    @doctors_hash = []
     while i < @doctors.length
       doctor_hash = {}
       doctor_hash['doctor'] = @doctors[i]
       doctor_hash['address'] = Address.find_by(doctor_addresses: DoctorAddress.find_by(doctor: @doctors[i]))
-      @docs.push(doctor_hash)
+      @doctors_hash.push(doctor_hash)
       i += 1
     end
-    render json: @docs
+    render json: @doctors_hash
   end
 
   # GET /doctors/1
