@@ -36,75 +36,34 @@ Additional description about the project and its features.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+* Ruby (ruby --v)
+* SQLite3 (sqlite3 --v)
+* Postgrestsql (psql --version)
+* Node.js (node --v)
+* Yarn (yarn --v)
 
-- You need to have git installed in your machine.
-- Install a recent version of Postgres.
-- Already install Rails
+To get a local copy up and running follow these simple example steps.
 
-### Setup
+Run in your terminal `git clone https://github.com/azy64/book-an-appointment`
 
-- Creating the book-an-appontment
+### Install RSpec
 
-```bash
-$   rails new book-an-appontment --api --database=postgresql
-$   cd book-an-appontment # Move into the application directory
-```
+To run the tests locally :
 
-- Clone this repository
+* To instal RSpec for testing please run the following command on your terminal:
 
-```bash
-$ https://github.com/BenMukebo/book-an-appontment.git
-$ cd hello-react-front-end
-```
+ ` gem install rspec`
 
-- Create the database
+### Helpful links to solve some issues
 
-```bash
-$   rails db:create
-```
+* [Could not find gem](https://stackoverflow.com/questions/32491201/could-not-find-gem-pg-0-12-4-ruby-in-any-of-the-gem-sources-listed-in-your)
+* [Install psql](https://harshityadav95.medium.com/postgresql-in-windows-subsystem-for-linux-wsl-6dc751ac1ff3)
+* [PG:: InsufficientPrivilege: ERROR:  must be owner of database blog_app_development](https://stackoverflow.com/questions/25610753/activerecordstatementinvalid-pgerror-error-must-be-owner-of-database)
 
 
-### Install
-
-- Setting Up PostgreSQL
-
-> The postgres installation doesn't setup a user for you, so you'll need to follow these steps to create a user with permission to create databases
-
-```bash
-$  sudo -u postgres createuser blog-app -s
-```
-
-
-### Usage
-
-- To starting up the Web Server
-
-```bash
-$   rails s # or
-$   rails server -p3001
-
-$  sudo service postgresql restart # To restart the server
-```
-
-### Run tests
-
-- Run spec
-
-```bash
-$  bundle exec rspec ./spec/models/
-$  bundle exec rspec ./spec/routing/
-```
-
-- Run linter
-
-```bash
-$  rubocop .
-$  rubocop -A # RuboCop will try to automatically fix offenses:
-```
-
-### Deployment
-
-
+## Run the application
+-connect to your psql
+-  run `rails s` in your terminal
 
 ## Authors
 
@@ -113,23 +72,21 @@ $  rubocop -A # RuboCop will try to automatically fix offenses:
 - GitHub: [@azy64](https://github.com/azy64)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/azaria-saidi-524780112/)
 
+👤 **Victor**
+
+- GitHub: [@VICTOR-CHUKWU](https://github.com/VICTOR-CHUKWU)
+- LinkedIn: [Victor-chukwu](https://www.linkedin.com/in/victor-chukwu-95a020143)
 
 👤 **Ntazama Willy**
 
 - GitHub: [@ntzwilly](https://github.com/ntzwilly)
 - LinkedIn: [@ntazamawilly](https://linkedin.com/in/ntazama-willy-b676b7aa)
 
-
 👤 **Ben Mukebo**
 
 - GitHub: [@BenMukebo](https://github.com/BenMukebo)
 - Twitter [@BenMukebo](https://twitter.com/BenMukebo)
 - LinkedIn [BenMukebo](https://www.linkedin.com/in/kasongo-mukebo-ben-591720205/)
-
-👤 **Victor**
-
-- GitHub: [@VICTOR-CHUKWU](https://github.com/VICTOR-CHUKWU)
-- LinkedIn: [Victor-chukwu](https://www.linkedin.com/in/victor-chukwu-95a020143)
   
 ## 🤝 Contributing
 
