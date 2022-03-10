@@ -4,13 +4,24 @@ class DoctorsController < ApplicationController
   # GET /doctors
   def index
     @doctors = Doctor.all
-
-    render json: @doctors
+    i = 0
+    @docs = []
+    while i < @doctors.length
+      doc = {}
+      doc['doctor'] = @doctors[i]
+      doc['address'] = Address.find_by(doctor_addresses: DoctorAddress.find_by(doctor: @doctors[i]))
+      @docs.push(doc)
+      i += 1
+    end
+    render json: @docs
   end
 
   # GET /doctors/1
   def show
-    render json: @doctor
+    @doc = {}
+    @doc['doctor:'] = @doctor
+    @doc['address'] = Address.find_by(doctor_addresses: DoctorAddress.find_by(doctor: @doctor))
+    render json: @doc
   end
 
   # POST /doctors

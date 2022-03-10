@@ -4,13 +4,27 @@ class ReservationsController < ApplicationController
   # GET /reservations
   def index
     @reservations = Reservation.all
+    @res = []
+    i = 0
+    while i < @reservations.length
+      resevation = {}
+      resevation['user'] = User.find_by(id: @reservations[i].user)
+      resevation['doctor'] = Doctor.find_by(id: @reservations[i].doctor)
+      resevation['reservation'] = @reservations[i]
+      @res.push(resevation)
+      i += 1
+    end
 
-    render json: @reservations
+    render json: @res
   end
 
   # GET /reservations/1
   def show
-    render json: @reservation
+    @res = {}
+    @res['user'] = User.find_by(id: @reservation.user)
+    @res['doctor'] = Doctor.find_by(id: @reservation.doctor)
+    @res['reservation'] = @reservation
+    render json: @res
   end
 
   # POST /reservations
@@ -55,4 +69,3 @@ class ReservationsController < ApplicationController
     params.require(:reservation).permit(:reservation_time, :date, :user, :doctor)
   end
 end
-
