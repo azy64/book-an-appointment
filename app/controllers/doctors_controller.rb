@@ -7,10 +7,10 @@ class DoctorsController < ApplicationController
     i = 0
     @docs = []
     while i < @doctors.length
-      doc = {}
-      doc['doctor'] = @doctors[i]
-      doc['address'] = Address.find_by(doctor_addresses: DoctorAddress.find_by(doctor: @doctors[i]))
-      @docs.push(doc)
+      doctor_hash = {}
+      doctor_hash['doctor'] = @doctors[i]
+      doctor_hash['address'] = Address.find_by(doctor_addresses: DoctorAddress.find_by(doctor: @doctors[i]))
+      @docs.push(doctor_hash)
       i += 1
     end
     render json: @docs
