@@ -8,6 +8,15 @@ The project we are going to build for the Final Capstone Project is based on an 
 
 Additional description about the project and its features.
 
+## Learning objectives
+
+- Apply technical knowledge and skills gained in previous modules in a complex project.
+- Understand pros and cons of different approaches of connecting Ruby on Rails back-end with React front-end.
+- Understand principles of Ruby on Rails and React frameworks.
+- Apply Ruby best practices and language style guides in code.
+- Apply RoR best practices and language style guides in code (e.g. thin controllers).
+- etc ...
+
 ## Built With
 
 - ![Ruby](https://img.shields.io/badge/-Ruby-000000?style=flat&logo=ruby&logoColor=red)
@@ -27,18 +36,34 @@ Additional description about the project and its features.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+* Ruby (ruby --v)
+* SQLite3 (sqlite3 --v)
+* Postgrestsql (psql --version)
+* Node.js (node --v)
+* Yarn (yarn --v)
 
-### Setup
+To get a local copy up and running follow these simple example steps.
 
-### Install
+Run in your terminal `git clone https://github.com/azy64/book-an-appointment`
 
-### Usage
+### Install RSpec
 
-### Run tests
+To run the tests locally :
 
-### Deployment
+* To instal RSpec for testing please run the following command on your terminal:
+
+ ` gem install rspec`
+
+### Helpful links to solve some issues
+
+* [Could not find gem](https://stackoverflow.com/questions/32491201/could-not-find-gem-pg-0-12-4-ruby-in-any-of-the-gem-sources-listed-in-your)
+* [Install psql](https://harshityadav95.medium.com/postgresql-in-windows-subsystem-for-linux-wsl-6dc751ac1ff3)
+* [PG:: InsufficientPrivilege: ERROR:  must be owner of database blog_app_development](https://stackoverflow.com/questions/25610753/activerecordstatementinvalid-pgerror-error-must-be-owner-of-database)
 
 
+## Run the application
+-connect to your psql
+-  run `rails s` in your terminal
 
 ## Authors
 
@@ -47,17 +72,27 @@ To get a local copy up and running follow these simple example steps.
 - GitHub: [@azy64](https://github.com/azy64)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/azaria-saidi-524780112/)
 
-👤 **Henry Kc**
+👤 **Victor**
 
-- GitHub: [@githubhandle](https://github.com/henrykc24)
-- Twitter: [@twitterhandle](https://twitter.com/henrykc24)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/henry-kc)
+- GitHub: [@VICTOR-CHUKWU](https://github.com/VICTOR-CHUKWU)
+- LinkedIn: [Victor-chukwu](https://www.linkedin.com/in/victor-chukwu-95a020143)
+
+👤 **Ntazama Willy**
+
+- GitHub: [@ntzwilly](https://github.com/ntzwilly)
+- LinkedIn: [@ntazamawilly](https://linkedin.com/in/ntazama-willy-b676b7aa)
+
+👤 **Ben Mukebo**
+
+- GitHub: [@BenMukebo](https://github.com/BenMukebo)
+- Twitter [@BenMukebo](https://twitter.com/BenMukebo)
+- LinkedIn [BenMukebo](https://www.linkedin.com/in/kasongo-mukebo-ben-591720205/)
   
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/azy64/book-an-appointment/issues).
 
 ## Show your support
 
