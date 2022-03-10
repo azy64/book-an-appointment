@@ -19,7 +19,7 @@ class DoctorsController < ApplicationController
   # GET /doctors/1
   def show
     @doc = {}
-    @doc['doctor:'] = @doctor
+    @doc['doctor'] = @doctor
     @doc['address'] = Address.find_by(doctor_addresses: DoctorAddress.find_by(doctor: @doctor))
     render json: @doc
   end
