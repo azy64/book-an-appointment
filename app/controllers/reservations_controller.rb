@@ -4,18 +4,18 @@ class ReservationsController < ApplicationController
   # GET /reservations
   def index
     @reservations = Reservation.all
-    @res = []
+    @reservation_hash = []
     i = 0
     while i < @reservations.length
       resevation = {}
       resevation['user'] = User.find_by(id: @reservations[i].user)
       resevation['doctor'] = Doctor.find_by(id: @reservations[i].doctor)
       resevation['reservation'] = @reservations[i]
-      @res.push(resevation)
+      @reservation_hash.push(resevation)
       i += 1
     end
 
-    render json: @res
+    render json: @reservation_hash
   end
 
   # GET /reservations/1
