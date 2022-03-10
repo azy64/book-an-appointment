@@ -24,20 +24,29 @@ class ReservationsController < ApplicationController
     @res['user'] = User.find_by(id: @reservation.user)
     @res['doctor'] = Doctor.find_by(id: @reservation.doctor)
     @res['reservation'] = @reservation
+    @res['address'] = Address.find_by(id: DoctorAddress.find_by(id: @reservation.doctor.doctor_addresses))
     render json: @res
   end
 
   # POST /reservations
   def create
-    @reservation = Reservation.new(reservation_params)
-    user = User.find_by(id: @reservation.user)
-    doctor = Doctor.find_by(id: @reservation.doctor)
-    @reservation.user = user
-    @reservation.doctor = doctor
+    @reservation = Reservation.new
+    @reservation.reservation_time = params[:reservation][:reservation_time]
+    @reservation.user = User.find_by(id: params[:reservation][:user])
+    @reservation.doctor = Doctor.find_by(id: params[:reservation][:doctor])
+    @res = {}
+    @res['reservation'] = @reservation
+    @res['user'] = @reservation.user
+    @res['doctor'] = @reservation.doctor
+    @res['address'] = Address.find_by(id: DoctorAddress.find_by(id: @reservation.doctor.doctor_addresses))
+    # user = User.find_by(id: @reservation.user)
+    # doctor = Doctor.find_by(id: @reservation.doctor)
+    # @reservation.user = @user1
+    # @reservation.doctor = @doc
     # @reservation.user = current_user
 
     if @reservation.save
-      render json: @reservation, status: :created, location: @reservation
+      render json: @res, status: :created, location: @reservations
     else
       render json: @reservation.errors, status: :unprocessable_entity
     end
@@ -66,6 +75,9 @@ class ReservationsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def reservation_params
-    params.require(:reservation).permit(:reservation_time, :date, :user, :doctor)
+    params.require(:reservation).permit(:reservation_time, :user, :doctor)
+    #   @user1 = User.find_by(id: params['reservation']['user'])
+    #   @doc = Doctor.find_by(id: params['reservation']['doctor'])
+    #   params['reservation']['user'] = @user1
   end
 end
