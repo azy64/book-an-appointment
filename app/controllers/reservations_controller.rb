@@ -20,12 +20,12 @@ class ReservationsController < ApplicationController
 
   # GET /reservations/1
   def show
-    @res = {}
-    @res['user'] = User.find_by(id: @reservation.user)
-    @res['doctor'] = Doctor.find_by(id: @reservation.doctor)
-    @res['reservation'] = @reservation
-    @res['address'] = Address.find_by(id: DoctorAddress.find_by(id: @reservation.doctor.doctor_addresses))
-    render json: @res
+    @reservation_hash = {}
+    @reservation_hash['user'] = User.find_by(id: @reservation.user)
+    @reservation_hash['doctor'] = Doctor.find_by(id: @reservation.doctor)
+    @reservation_hash['reservation'] = @reservation
+    @reservation_hash['address'] = Address.find_by(id: DoctorAddress.find_by(id: @reservation.doctor.doctor_addresses))
+    render json: @reservation_hash
   end
 
   # POST /reservations
