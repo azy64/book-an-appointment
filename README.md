@@ -8,6 +8,15 @@ The project we are going to build for the Final Capstone Project is based on an 
 
 Additional description about the project and its features.
 
+## Learning objectives
+
+- Apply technical knowledge and skills gained in previous modules in a complex project.
+- Understand pros and cons of different approaches of connecting Ruby on Rails back-end with React front-end.
+- Understand principles of Ruby on Rails and React frameworks.
+- Apply Ruby best practices and language style guides in code.
+- Apply RoR best practices and language style guides in code (e.g. thin controllers).
+- etc ...
+
 ## Built With
 
 - ![Ruby](https://img.shields.io/badge/-Ruby-000000?style=flat&logo=ruby&logoColor=red)
@@ -56,8 +65,6 @@ To run the tests locally :
 -connect to your psql
 -  run `rails s` in your terminal
 
-
-
 ## Authors
 
 👤 **Azaria SAIDI ALLY**
@@ -85,7 +92,7 @@ To run the tests locally :
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/azy64/book-an-appointment/issues).
 
 ## Show your support
 

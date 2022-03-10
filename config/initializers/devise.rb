@@ -15,9 +15,9 @@ Devise.setup do |config|
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
   # config.secret_key = '18c9043d4977bca956cd33a6fc5f980aa6fa54b9cbdcab6239ea95f007c632f133fc07bfc52ffdecd16e15cd0f207f69f1d7104d557a5adf0da2d31f0d520464'
-
+  jwtt = '0QRYPGxCjn3OoY0KZvjPtGLyG/SyaYD17D/0uG8lS7kuIghmSkAHbgedNXAs2XfPKLc2slDqYsDGVwAUnjOyX0B3cSsN5uCOiQjHj6cOyFcwH/DuBmrTKg6x1BLV78N4ogDy/aZCXUqartlkeNukiSxjXfxUWg4/wIeAMP8L62wi8v6IdKWobjMQ1xul698k55Ffx7YwiGnMXiy1gVp7WnAzSlUe23rfWB6lAR2tWXWIkU1Bmk1ZUsQ7k5cdou2Wy+LlqKEPePdP+4Nng582jJ59VEerUrcV317frq7WyJxoZbvsUjAaq71bhT4LbpMZpUopyqhj+VR37XZgzz4S9ObDVWSQVUl+GhK2HXLL3E4ET2/4qy6LwARteXG4jRa+7qRKV+QR9vLZQ/YcNDGwfrM/LjjlUw7ieGUxzaqFBvygR4k5UF32sHQpS9MO1Wq2sV3XzBFCxtgmiz9+zgDZD+ONy6MZUno+vm8pAkAfUprxw8uoBLwfRSDlk7KOKRNN0zi2dZ6F5dlwP5YU7DbVhzzeYVr+wB4FhLrgbMefWxi8H4G46IdKntymMckBNul7GQOWQHd2Zb800hOBsdsv5X8rZfrNZ3pmRbYgTIKsDw==--F3evukB/KmQYsXpV--yTUiqJAcfB+MqxIO5Gf/lw=='
   config.jwt do |jwt|
-    jwt.secret = Rails.application.credentials.devise[:jwt_secret_key]
+    jwt.secret = jwtt # Rails.application.credentials.devise[:jwt_secret_key]
   end
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -55,10 +55,10 @@ Devise.setup do |config|
   # given should be a request method and it will automatically be passed to the
   # find_for_authentication method and considered in your model lookup. For instance,
   # if you set :request_keys to [:subdomain], :subdomain will be used on authentication.
-  # The same considerations mentioned for authentication_keys also apply to request_keys.
+  # The same considerations mentioned for authentication_keys also apply to request_keys
   # config.request_keys = []
 
-  # Configure which authentication keys should be case-insensitive.
+  # Configure which authentication keys should be case-insensitive
   # These keys will be downcased upon creating or modifying a user and when used
   # to authenticate or find a user. Default is :email.
   config.case_insensitive_keys = [:email]
