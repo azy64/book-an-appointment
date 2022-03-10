@@ -55,3 +55,4 @@ class ReservationsController < ApplicationController
     params.require(:reservation).permit(:reservation_time, :date, :user, :doctor)
   end
 end
+
