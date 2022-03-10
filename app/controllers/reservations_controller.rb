@@ -71,8 +71,5 @@ class ReservationsController < ApplicationController
   # Only allow a list of trusted parameters through.
   def reservation_params
     params.require(:reservation).permit(:reservation_time, :user, :doctor)
-    #   @user1 = User.find_by(id: params['reservation']['user'])
-    #   @doc = Doctor.find_by(id: params['reservation']['doctor'])
-    #   params['reservation']['user'] = @user1
   end
 end
