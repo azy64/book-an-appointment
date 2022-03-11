@@ -48,9 +48,9 @@ RSpec.describe 'Doctors', type: :request do
 
     it 'should show information about all books' do
       index_request
-      expect(json[0].size).to eq(6)
-      expect(json[0]['name']).to eq('Aladdin Miler')
-      expect(json[0]['email']).to eq('aladdin@gmail.com')
+      expect(json[0].size).to eq(2)
+      expect(json[0]['doctor']['name']).to eq('Aladdin Miler')
+      expect(json[0]['doctor']['email']).to eq('aladdin@gmail.com')
     end
   end
 
@@ -63,7 +63,7 @@ RSpec.describe 'Doctors', type: :request do
 
     it 'should show information about a single doctor' do
       show_request
-      expect(json['name']).to eq('Aladdin Miler')
+      expect(json['doctor']['name']).to eq('Aladdin Miler')
     end
   end
 

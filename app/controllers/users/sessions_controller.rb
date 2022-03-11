@@ -4,6 +4,8 @@ class Users::SessionsController < Devise::SessionsController
   private
 
   def respond_with(resource, _opts = {})
+    # puts(params, 'here is the params')
+    # @user = User.find_by(email: params['email'])
     render json: { user: resource, message: 'You are logged in.' }, status: :ok
   end
 
