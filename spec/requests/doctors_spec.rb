@@ -41,18 +41,18 @@ RSpec.describe 'Doctors', type: :request do
 
   describe '/doctors#index' do
     it 'should return a successful response' do
-      index_request
-      expect(response).to be_successful
-      expect(response).to have_http_status(200)
+    index_request
+    expect(response).to be_successful
+    expect(response).to have_http_status(200)
     end
 
     it 'should show information about all books' do
-      index_request
-      expect(json[0].size).to eq(6)
-      expect(json[0]['name']).to eq('Aladdin Miler')
-      expect(json[0]['email']).to eq('aladdin@gmail.com')
+    index_request
+    expect(json[0].size).to eq(2)
+    expect(json[0]['doctor']['name']).to eq('Aladdin Miler')
+    expect(json[0]['doctor']['email']).to eq('aladdin@gmail.com')
     end
-  end
+  end 
 
   describe '/doctors#show' do
     it 'should return a successful response' do
@@ -60,25 +60,20 @@ RSpec.describe 'Doctors', type: :request do
       expect(response).to have_http_status(200)
       expect(response).to be_successful
     end
+  end
+
+  describe '/doctors#show' do
+    it 'should return a successful response' do
+    show_request
+    expect(response).to have_http_status(200)
+    expect(response).to be_successful
+    end
 
     it 'should show information about a single doctor' do
-      show_request
-      expect(json['name']).to eq('Aladdin Miler')
+    show_request
+    expect(json['doctor']['name']).to eq('Aladdin Miler')
     end
-  end
-
-  describe '/doctors#create' do
-    it 'should return a created response' do
-      create_request
-      expect(response).to have_http_status(201)
-    end
-
-    # it 'should show information about the doctor created' do
-    #   expect { create_request }.to change { Book.count }.from(1).to(2)
-    #   expect(json['data']['title']).to eq('The Punisher')
-    #   expect(json['data']['author']).to eq('Stan Lee')
-    # end
-  end
+  end 
 
   describe '/doctors#delete' do
     it 'should return a successful response' do
