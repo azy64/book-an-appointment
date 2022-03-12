@@ -3,28 +3,13 @@ class ReservationsController < ApplicationController
 
   # GET /reservations
   def index
-    @reservations = Reservation.all
-    @reservation_hash = []
-    i = 0
-    while i < @reservations.length
-      resevation = {}
-      resevation['user'] = User.find_by(id: @reservations[i].user)
-      resevation['doctor'] = Doctor.find_by(id: @reservations[i].doctor)
-      resevation['reservation'] = @reservations[i]
-      @reservation_hash.push(resevation)
-      i += 1
-    end
-
+    @reservation_hash = Reservation.return_user_doctor_reservations
     render json: @reservation_hash
   end
 
   # GET /reservations/1
   def show
-    @reservation_hash = {}
-    @reservation_hash['user'] = User.find_by(id: @reservation.user)
-    @reservation_hash['doctor'] = Doctor.find_by(id: @reservation.doctor)
-    @reservation_hash['reservation'] = @reservation
-    @reservation_hash['address'] = Address.find_by(id: DoctorAddress.find_by(id: @reservation.doctor.doctor_addresses))
+    @reservation_hash = Reservation.return_reservation_from(@reservation)
     render json: @reservation_hash
   end
 
@@ -34,11 +19,7 @@ class ReservationsController < ApplicationController
     @reservation.reservation_time = params[:reservation][:reservation_time]
     @reservation.user = User.find_by(id: params[:reservation][:user])
     @reservation.doctor = Doctor.find_by(id: params[:reservation][:doctor])
-    @reservation_hash = {}
-    @reservation_hash['reservation'] = @reservation
-    @reservation_hash['user'] = @reservation.user
-    @reservation_hash['doctor'] = @reservation.doctor
-    @reservation_hash['address'] = Address.find_by(id: DoctorAddress.find_by(id: @reservation.doctor.doctor_addresses))
+    @reservation_hash = Reservation.return_reservation_from(@reservation)
 
     if @reservation.save
       render json: @reservation_hash, status: :created, location: @reservations
