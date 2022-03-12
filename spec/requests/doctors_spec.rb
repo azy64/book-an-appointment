@@ -72,12 +72,6 @@ RSpec.describe 'Doctors', type: :request do
       create_request
       expect(response).to have_http_status(201)
     end
-
-    # it 'should show information about the doctor created' do
-    #   expect { create_request }.to change { Book.count }.from(1).to(2)
-    #   expect(json['data']['title']).to eq('The Punisher')
-    #   expect(json['data']['author']).to eq('Stan Lee')
-    # end
   end
 
   describe '/doctors#delete' do
@@ -97,17 +91,4 @@ RSpec.describe 'Doctors', type: :request do
       expect(json['user']['email']).to eq('aladdin@gmail.com')
     end
   end
-
-  # describe 'api/books#update' do
-  #   it 'should return a created response' do
-  #     update_request
-  #     expect(response).to have_http_status(201)
-  #   end
-
-  #   it 'should show information about the book updated' do
-  #     update_request
-  #     expect(json['data']['name']).to eq('Aladdin Miler')
-  #     expect(json['data']['email']).to eq('aladdin@gmail.com')
-  #   end
-  # end
 end

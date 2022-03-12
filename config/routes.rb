@@ -4,12 +4,11 @@ Rails.application.routes.draw do
                  sessions: 'users/sessions',
                  registrations: 'users/registrations'
              }
-  # get '/member-data', to: 'members#show'
   
-  resources :addresses
-  resources :doctors
+  resources :addresses, only: [:create, :show]
+  resources :doctors, only: [:show, :update, :index, :create, :destroy]
   resources :users do
-    resources :reservations
+    resources :reservations, only: [:create, :show, :index, :destroy, :update]
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
