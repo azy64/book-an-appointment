@@ -3,24 +3,14 @@ class DoctorsController < ApplicationController
 
   # GET /doctors
   def index
-    @doctors = Doctor.all
-    i = 0
-    @doctors_hash = []
-    while i < @doctors.length
-      doctor_hash = {}
-      doctor_hash['doctor'] = @doctors[i]
-      doctor_hash['address'] = Address.find_by(doctor_addresses: DoctorAddress.find_by(doctor: @doctors[i]))
-      @doctors_hash.push(doctor_hash)
-      i += 1
-    end
+    @doctors_hash = Doctor.return_doctors_adresses
     render json: @doctors_hash
   end
 
   # GET /doctors/1
   def show
-    @doctor_hash = {}
-    @doctor_hash['doctor'] = @doctor
-    @doctor_hash['address'] = Address.find_by(doctor_addresses: DoctorAddress.find_by(doctor: @doctor))
+    @doctor_hash = Doctor.return_doctor_adress(@doctor)
+    puts @doctor_hash.inspect
     render json: @doctor_hash
   end
 
